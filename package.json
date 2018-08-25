@@ -1,0 +1,28 @@
+{
+  "name": "vk-clone-client",
+  "version": "0.0.1",
+  "author": "lyskos97@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "next build ./src",
+    "dev": "next ./src",
+    "start": "next start ./src"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^0.2.0",
+    "apollo-boost": "^0.1.10",
+    "emotion": "^9.2.6",
+    "emotion-server": "^9.2.6",
+    "graphql": "^0.13.2",
+    "nanoid": "^1.1.0",
+    "next": "^6.1.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.3.2",
+    "react-apollo": "^2.1.9",
+    "react-dom": "^16.3.2",
+    "react-emotion": "^9.2.6"
+  },
+  "devDependencies": {
+    "babel-plugin-emotion": "^9.2.6"
+  }
+}
