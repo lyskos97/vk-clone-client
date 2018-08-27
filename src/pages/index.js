@@ -1,8 +1,10 @@
 import Head from 'next/head';
-
-import Layout from '../components/Layout';
-import vars from '../vars';
 import styled from 'react-emotion';
+
+import vars from '../vars';
+import { Layout } from '../components/ui/templates';
+import { Card } from '../components/ui/atoms';
+import { Post } from '../components/ui/organisms';
 
 const Wrapper = styled.div`
   display: flex;
@@ -44,7 +46,7 @@ const Index = () => {
       </Head>
       <Wrapper>
         <FeedWrapper>
-          <FeedItemBox>
+          <Card>
             <div
               style={{
                 padding: 10,
@@ -70,9 +72,9 @@ const Index = () => {
                 />
               </div>
             </div>
-          </FeedItemBox>
+          </Card>
 
-          <FeedItemBox>
+          <Card>
             <div style={{ padding: 15 }}>
               <span>Истории</span>
               <div style={{ overflow: 'hidden' }}>
@@ -110,22 +112,15 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </FeedItemBox>
+          </Card>
           <div>
-            <FeedItemBox>
-              <div style={{ padding: 10 }}>
-                <div>
-                  <h2>post header</h2>
-                </div>
-                <div>post body</div>
-                <hr />
-                <div>post comments</div>
-              </div>
-            </FeedItemBox>
+            <Post />
+            <Post />
+            <Post />
           </div>
         </FeedWrapper>
         <FeedOptionsWrapper>
-          <FeedItemBox>
+          <Card>
             <div style={{ padding: '6px 0' }}>
               <ul style={{ listStyle: 'none' }}>
                 <li>Новости</li>
@@ -145,7 +140,7 @@ const Index = () => {
                 <li>Комментарии</li>
               </ul>
             </div>
-          </FeedItemBox>
+          </Card>
         </FeedOptionsWrapper>
       </Wrapper>
     </Layout>

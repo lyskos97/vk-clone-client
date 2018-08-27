@@ -1,9 +1,7 @@
 import styled from 'react-emotion';
 import Link from 'next/link';
 
-import LogoIcon from '../../icons/logo';
-import LensIcon from '../../icons/lens';
-import vars from '../../vars';
+import { LogoIcon } from '../atoms';
 import {
   Content,
   ImageWrapper,
@@ -13,9 +11,9 @@ import {
   SearchInput,
   SearchWrapper,
   Wrapper,
-} from './styles';
+} from './HeaderStyles';
 
-const Header = () => {
+export const Header = () => {
   return (
     <Wrapper>
       <Content>
@@ -41,5 +39,3 @@ const Header = () => {
     </Wrapper>
   );
 };
-
-export default Header;

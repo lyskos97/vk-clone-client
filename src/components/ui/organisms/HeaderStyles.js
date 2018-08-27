@@ -1,5 +1,6 @@
 import styled from 'react-emotion';
-import vars from '../../vars';
+
+import vars from '../../../vars';
 
 export const Wrapper = styled.header`
   position: fixed;

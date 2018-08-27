@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import styled from 'react-emotion';
 
-import vars from '../../vars';
-import ChatIcon from '../../icons/chat';
+import vars from '../../../vars';
 
 const Wrapper = styled.div`
   padding: 15px 5px 10px 0;
@@ -19,7 +18,7 @@ const Item = styled.span`
   }
 `;
 
-const Menu = () => {
+export const Menu = () => {
   return (
     <Wrapper>
       <nav>
@@ -42,5 +41,3 @@ const Menu = () => {
     </Wrapper>
   );
 };
-
-export default Menu;

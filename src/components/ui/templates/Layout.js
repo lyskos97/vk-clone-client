@@ -1,8 +1,9 @@
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 
-import Header from './Header';
-import vars from '../vars';
-import Menu from './Menu';
+import { Header } from '../organisms';
+import { Menu } from '../molecules';
+import theme from '../theme';
+import vars from '../../../vars';
 
 const Gutter = styled.div`
   height: ${vars.headerHeight};
@@ -23,7 +24,7 @@ const ContentWrapper = styled.div`
   flex: 10;
 `;
 
-const Layout = ({ children }) => {
+export const Layout = ({ children }) => {
   return (
     <div>
       <Header />
@@ -37,5 +38,3 @@ const Layout = ({ children }) => {
     </div>
   );
 };
-
-export default Layout;

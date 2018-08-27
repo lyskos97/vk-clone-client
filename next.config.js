@@ -5,6 +5,7 @@ module.exports = withCSS({
   distDir: '../dist',
   webpack: (config, { isServer, dir }) => {
     config.externals = [];
+
     if (isServer) {
       config.externals.push((ctx, req, cb) => {
         resolve(req, { baseDir: dir, preserveSymlinks: true }, (err, res) => {
@@ -24,6 +25,18 @@ module.exports = withCSS({
         });
       });
     }
+
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: [
+        'babel-loader',
+        {
+          loader: 'react-svg-loader',
+          options: { jsx: true },
+        },
+      ],
+    });
+
     return config;
   },
 });

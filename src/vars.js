@@ -6,6 +6,7 @@ export default {
     link: '#285473',
     black: '#222',
     bg: '#edeef0',
+    border: '#e7e8ec',
   },
   headerHeight: '42px',
 };
