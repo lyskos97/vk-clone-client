@@ -37,6 +37,11 @@ export const Menu = () => {
             <Item>Сообщения</Item>
           </a>
         </Link>
+        <Link href="/misc">
+          <a>
+            <Item>Misc</Item>
+          </a>
+        </Link>
       </nav>
     </Wrapper>
   );

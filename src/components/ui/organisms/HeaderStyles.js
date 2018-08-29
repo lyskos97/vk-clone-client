@@ -10,6 +10,7 @@ export const Wrapper = styled.header`
 `;
 
 export const Content = styled.div`
+  position: relative;
   margin: 0 150px;
   padding: 0 15px;
   height: 100%;
@@ -28,7 +29,7 @@ export const SearchWrapper = styled.div`
 `;
 
 export const ProfileBadgeWrapper = styled.div`
-  flex: 2;  
+  flex: 2;
   display: flex;
   align-items: center;
   justify-content: flex-end;
