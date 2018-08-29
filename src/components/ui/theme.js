@@ -1,5 +1,6 @@
 export default {
   color: {
+    white: '#fff',
     black: '#222',
     grey: '#929eb0',
     bgMain: '#edeef0',
@@ -18,6 +19,11 @@ export default {
     btnSecondary: '#5fb053',
     btnSecondaryHover: '#68b35d',
     btnSecondaryActive: '#5aa84d',
+
+    btnTertiary: '#e5ebf1',
+    btnTertiaryaryHover: '#dfe6ed',
+    btnTertiaryActive: '#dae2ea',
+    btnTertiaryText: '#55677d',
   },
   font: {
     regular:
