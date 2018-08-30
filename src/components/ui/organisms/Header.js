@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component, createRef } from 'react';
 import styled from 'react-emotion';
 import Link from 'next/link';
 
@@ -15,39 +15,43 @@ import {
   Wrapper,
 } from './HeaderStyles';
 
-const StyledProfileDropdown = styled(ProfileDropdown)`
+const AdjustedProfileDropdown = styled(ProfileDropdown)`
   top: 48px;
   right: -2px;
 `;
 
-// TODO: Forward dropdown ref
 export class Header extends Component {
-  dropdownRef = React.createRef();
+  dropdownRef = createRef();
+  dropdownButtonRef = createRef();
 
   state = {
     showDropdown: false,
   };
 
   componentDidMount() {
-    document.addEventListener('mousedown', this.handleOutsideClick);
+    document.addEventListener('mousedown', this.handleClickOutside, false);
   }
 
   componentWillUnmount() {
-    document.addEventListener('mousedown', this.handleOutsideClick);
+    document.addEventListener('mousedown', this.handleClickOutside, false);
   }
 
   toggleDropdown = () => {
     this.setState(prevState => ({ showDropdown: !prevState.showDropdown }));
   };
 
-  handleOutsideClick = e => {
-    if (this.dropdownRef && !this.dropdownRef.contains(e.target))
-      this.setState({ showDropdown: false });
+  handleClickOutside = e => {
+    if (this.dropdownRef.current) {
+      if (!this.dropdownButtonRef.current.contains(e.target)) {
+        this.setState({ showDropdown: false });
+      }
+    }
   };
 
   render() {
     const { showDropdown } = this.state;
     console.log('render', showDropdown);
+    console.log('this.ref', this.dropdownRef);
     return (
       <Wrapper>
         <Content>
@@ -63,43 +67,20 @@ export class Header extends Component {
               <SearchInput placeholder="Поиск" />
             </SearchContainer>
           </SearchWrapper>
-          <ProfileBadgeWrapper onClick={this.toggleDropdown}>
+          <ProfileBadgeWrapper
+            onClick={this.toggleDropdown}
+            innerRef={this.dropdownButtonRef}
+          >
             <span>Konstantin</span>
             <ImageWrapper>
               <img src="http://via.placeholder.com/320x160" alt="Profile pic" />
             </ImageWrapper>
+            {showDropdown && (
+              <AdjustedProfileDropdown innerRef={this.dropdownRef} />
+            )}
           </ProfileBadgeWrapper>
-          {showDropdown && <StyledProfileDropdown ref={this.dropdownRef} />}
         </Content>
       </Wrapper>
     );
   }
 }
-
-// export const Header = () => {
-//   return (
-//     <Wrapper>
-//       <Content>
-//         <LogoWrapper>
-//           <Link href="/">
-//             <a>
-//               <LogoIcon />
-//             </a>
-//           </Link>
-//         </LogoWrapper>
-//         <SearchWrapper>
-//           <SearchContainer>
-//             <SearchInput placeholder="Поиск" />
-//           </SearchContainer>
-//         </SearchWrapper>
-//         <ProfileBadgeWrapper>
-//           <span>Konstantin</span>
-//           <ImageWrapper>
-//             <img src="http://via.placeholder.com/320x160" alt="Profile pic" />
-//           </ImageWrapper>
-//           <StyledProfileDropdown />
-//         </ProfileBadgeWrapper>
-//       </Content>
-//     </Wrapper>
-//   );
-// };

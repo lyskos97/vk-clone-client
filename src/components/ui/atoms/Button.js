@@ -48,7 +48,7 @@ export const Button = styled.button`
 `;
 
 Button.propTypes = {
-  variant: PropTypes.oneOf(['primary', 'secondary']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   compact: PropTypes.bool,
 };
 

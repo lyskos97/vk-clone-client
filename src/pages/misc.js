@@ -4,9 +4,12 @@ import { prop } from 'styled-tools';
 
 import { Layout } from '../components/ui/templates';
 import { Card, Button } from '../components/ui/atoms';
-import { DropdownList } from '../components/ui/molecules';
+import {
+  DropdownList,
+  DropdownItem,
+  DropdownSeparator,
+} from '../components/ui/atoms';
 import theme from '../components/ui/theme';
-import { Dropdown } from '../components/ui/organisms';
 
 const Grid = styled.div`
   display: flex;
@@ -37,7 +40,17 @@ const Content = styled.div`
 `;
 
 export default class extends PureComponent {
+  state = {
+    showDropdown: true,
+  };
+
+  toggleDropdown = () => {
+    this.setState(prevState => ({ showDropdown: !prevState.showDropdown }));
+  };
+
   render() {
+    const { showDropdown } = this.state;
+
     return (
       <Layout>
         <Grid>
@@ -70,7 +83,18 @@ export default class extends PureComponent {
                 <h3>Dropdown</h3>
               </Header>
               <Content>
-                <Dropdown />
+                <Button variant="secondary" onClick={this.toggleDropdown}>
+                  TOGGLE DROPDOWN
+                </Button>
+                <div style={{ position: 'relative' }}>
+                  {showDropdown && (
+                    <DropdownList style={{ top: 0, right: 0 }}>
+                      <DropdownItem>Kek</DropdownItem>
+                      <DropdownItem>Kek</DropdownItem>
+                      <DropdownItem>Kek</DropdownItem>
+                    </DropdownList>
+                  )}
+                </div>
               </Content>
             </Card>
           </Col>

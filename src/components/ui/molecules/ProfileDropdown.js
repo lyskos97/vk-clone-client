@@ -1,11 +1,11 @@
-import { Component } from 'react';
+import { Component, forwardRef } from 'react';
 import Link from 'next/link';
 
 import { DropdownItem, DropdownSeparator, DropdownList } from '../atoms';
 
-export const ProfileDropdown = props => {
+export const ProfileDropdown = forwardRef((props, ref) => {
   return (
-    <DropdownList {...props}>
+    <DropdownList innerRef={ref} {...props}>
       <Link href="/me">
         <a>
           <DropdownItem>Моя страница</DropdownItem>
@@ -35,4 +35,4 @@ export const ProfileDropdown = props => {
       </Link>
     </DropdownList>
   );
-};
+});

@@ -1,6 +1,6 @@
 import styled from 'react-emotion';
 
-const Wrap = styled.div`
+export const DropdownList = styled.div`
   position: absolute;
 
   width: 160px;
@@ -27,11 +27,3 @@ const Wrap = styled.div`
     content: '';
   }
 `;
-
-export const DropdownList = ({ children, ...otherProps }) => {
-  return (
-    <Wrap {...otherProps}>
-      {children}
-    </Wrap>
-  );
-};
