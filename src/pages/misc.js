@@ -3,7 +3,15 @@ import styled from 'react-emotion';
 import { prop } from 'styled-tools';
 
 import { Layout } from '../components/ui/templates';
-import { Card, Button } from '../components/ui/atoms';
+import {
+  Card,
+  Button,
+  AudioIcon,
+  ArrowDownIcon,
+  LogoIcon,
+  LoupeIcon,
+  NotifyIcon,
+} from '../components/ui/atoms';
 import {
   DropdownList,
   DropdownItem,
@@ -80,21 +88,23 @@ export default class extends PureComponent {
           <Col w={1}>
             <Card>
               <Header>
-                <h3>Dropdown</h3>
+                <h3>Icons</h3>
               </Header>
               <Content>
-                <Button variant="secondary" onClick={this.toggleDropdown}>
-                  TOGGLE DROPDOWN
-                </Button>
-                <div style={{ position: 'relative' }}>
-                  {showDropdown && (
-                    <DropdownList style={{ top: 0, right: 0 }}>
-                      <DropdownItem>Kek</DropdownItem>
-                      <DropdownItem>Kek</DropdownItem>
-                      <DropdownItem>Kek</DropdownItem>
-                    </DropdownList>
-                  )}
-                </div>
+                <Row>
+                  <AudioIcon />
+                  <ArrowDownIcon />
+                  <LogoIcon fill={theme.color.grey} />
+                  <LoupeIcon />
+                  <NotifyIcon />
+                </Row>
+                <Row>
+                  <AudioIcon fill={theme.color.primary} />
+                  <ArrowDownIcon fill={theme.color.link} />
+                  <LogoIcon fill={theme.color.border} />
+                  <LoupeIcon fill={theme.color.btnSecondary} />
+                  <NotifyIcon fill={theme.color.btnTertiaryaryHover} />
+                </Row>
               </Content>
             </Card>
           </Col>
