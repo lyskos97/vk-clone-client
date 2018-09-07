@@ -1,5 +1,5 @@
 import styled from 'react-emotion';
-import vars from '../../../vars';
+import { palette } from 'ui/theme';
 
 export const SearchInput = styled.input`
   outline: none;
@@ -13,7 +13,7 @@ export const SearchInput = styled.input`
 
   &::placeholder {
     font-size: 13px;
-    color: ${vars.colors.primary};
+    color: ${palette.colors.primary};
   }
 
   &:focus {

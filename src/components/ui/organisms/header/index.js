@@ -2,8 +2,8 @@ import { Component, createRef } from 'react';
 import styled from 'react-emotion';
 import Link from 'next/link';
 
-import { ProfileDropdown } from '../molecules';
-import { LogoIcon } from '../atoms';
+import { ProfileDropdown } from 'ui/molecules';
+import { LogoIcon } from 'ui/atoms';
 import {
   Content,
   ImageWrapper,
@@ -13,7 +13,7 @@ import {
   SearchInput,
   SearchWrapper,
   Wrapper,
-} from './HeaderStyles';
+} from './styles';
 
 const AdjustedProfileDropdown = styled(ProfileDropdown)`
   top: 48px;

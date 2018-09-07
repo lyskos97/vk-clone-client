@@ -4,9 +4,10 @@
   "author": "lyskos97@gmail.com",
   "license": "MIT",
   "scripts": {
-    "build": "next build ./src",
-    "dev": "next ./src",
-    "start": "next start ./src -p 8000"
+    "build": "yarn link-ui && next build ./src",
+    "dev": "npm run link-ui && next ./src",
+    "start": "next start ./src -p 8000",
+    "link-ui": "cd ./src/components/ui && yarn link && cd ../../.. && yarn link ui"
   },
   "dependencies": {
     "@zeit/next-css": "^0.2.0",

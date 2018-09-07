@@ -2,7 +2,7 @@ import { PureComponent } from 'react';
 import styled from 'react-emotion';
 import { prop } from 'styled-tools';
 
-import { Layout } from '../components/ui/templates';
+import { Layout } from 'ui/templates';
 import {
   Card,
   Button,
@@ -11,13 +11,9 @@ import {
   LogoIcon,
   LoupeIcon,
   NotifyIcon,
-} from '../components/ui/atoms';
-import {
-  DropdownList,
-  DropdownItem,
-  DropdownSeparator,
-} from '../components/ui/atoms';
-import theme from '../components/ui/theme';
+} from 'ui/atoms';
+import { DropdownList, DropdownItem, DropdownSeparator } from 'ui/atoms';
+import { palette } from 'ui/theme';
 
 const Grid = styled.div`
   display: flex;
@@ -37,7 +33,7 @@ const Row = styled.div`
 
 const Header = styled.div`
   padding: 10px;
-  border-bottom: 1px solid ${theme.color.grey};
+  border-bottom: 1px solid ${palette.colors.grey};
 `;
 
 const Content = styled.div`
@@ -94,16 +90,16 @@ export default class extends PureComponent {
                 <Row>
                   <AudioIcon />
                   <ArrowDownIcon />
-                  <LogoIcon fill={theme.color.grey} />
+                  <LogoIcon fill={palette.colors.grey} />
                   <LoupeIcon />
                   <NotifyIcon />
                 </Row>
                 <Row>
-                  <AudioIcon fill={theme.color.primary} />
-                  <ArrowDownIcon fill={theme.color.link} />
-                  <LogoIcon fill={theme.color.border} />
-                  <LoupeIcon fill={theme.color.btnSecondary} />
-                  <NotifyIcon fill={theme.color.btnTertiaryaryHover} />
+                  <AudioIcon fill={palette.colors.primary} />
+                  <ArrowDownIcon fill={palette.colors.link} />
+                  <LogoIcon fill={palette.colors.border} />
+                  <LoupeIcon fill={palette.colors.btnSecondary} />
+                  <NotifyIcon fill={palette.colors.btnTertiaryaryHover} />
                 </Row>
               </Content>
             </Card>

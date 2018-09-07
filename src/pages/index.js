@@ -1,10 +1,9 @@
 import Head from 'next/head';
 import styled from 'react-emotion';
 
-import vars from '../vars';
-import { Layout } from '../components/ui/templates';
-import { Card } from '../components/ui/atoms';
-import { Post } from '../components/ui/organisms';
+import { Layout } from 'ui/templates';
+import { Card } from 'ui/atoms';
+import { Post } from 'ui/organisms';
 
 const Wrapper = styled.div`
   display: flex;
@@ -74,7 +73,7 @@ const Index = () => {
             </div>
           </Card>
 
-          <Card>
+          {/* <Card>
             <div style={{ padding: 15 }}>
               <span>Истории</span>
               <div style={{ overflow: 'hidden' }}>
@@ -112,7 +111,8 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </Card>
+          </Card> */}
+
           <div>
             <Post />
             <Post />

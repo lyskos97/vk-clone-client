@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styled from 'react-emotion';
 
-import vars from '../../../vars';
+import { palette } from 'ui/theme';
 
 const Wrapper = styled.div`
   padding: 15px 5px 10px 0;
@@ -10,11 +10,11 @@ const Wrapper = styled.div`
 const Item = styled.span`
   font-size: 13px;
   display: block;
-  color: ${vars.colors.link};
+  color: ${palette.colors.link};
   padding: 8px;
 
   &:hover {
-    background-color: ${vars.colors.buttonActive};
+    background-color: ${palette.colors.buttonActive};
   }
 `;
 

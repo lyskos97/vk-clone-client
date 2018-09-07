@@ -8,6 +8,9 @@ export {
   AudioIcon,
   LoupeIcon,
   NotifyIcon,
+  CommentIcon,
+  ShareIcon,
+  LikeIcon,
 } from './icons';
 export { DropdownItem } from './DropdownItem';
 export { DropdownSeparator } from './DropdownSeparator';

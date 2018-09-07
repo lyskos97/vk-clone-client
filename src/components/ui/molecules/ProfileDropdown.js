@@ -1,7 +1,7 @@
 import { Component, forwardRef } from 'react';
 import Link from 'next/link';
 
-import { DropdownItem, DropdownSeparator, DropdownList } from '../atoms';
+import { DropdownItem, DropdownSeparator, DropdownList } from 'ui/atoms';
 
 export const ProfileDropdown = forwardRef((props, ref) => {
   return (

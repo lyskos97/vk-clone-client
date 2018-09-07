@@ -2,12 +2,12 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { extractCritical } from 'emotion-server';
 
 import sanitize from '../sanitize';
-import vars from '../vars';
+import { palette } from 'ui/theme';
 
 const globalStyles = `
   ${sanitize}
   body {
-    background-color: ${vars.colors.bg};
+    background-color: ${palette.colors.bgMain};
   }
 
   a {

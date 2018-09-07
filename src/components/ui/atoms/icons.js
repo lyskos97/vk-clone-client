@@ -6,7 +6,10 @@ import {
   ArrowDownOutline,
   LoupeOutline,
   NotifyOutline,
-} from '../outlines';
+  CommentOutline,
+  ShareOutline,
+  LikeOutline,
+} from 'ui/outlines';
 
 const createIconComponent = Outline => {
   const Icon = styled(Outline)`
@@ -32,3 +35,6 @@ export const AudioIcon = createIconComponent(AudioOutline);
 export const ArrowDownIcon = createIconComponent(ArrowDownOutline);
 export const LoupeIcon = createIconComponent(LoupeOutline);
 export const NotifyIcon = createIconComponent(NotifyOutline);
+export const ShareIcon = createIconComponent(ShareOutline);
+export const CommentIcon = createIconComponent(CommentOutline);
+export const LikeIcon = createIconComponent(LikeOutline);

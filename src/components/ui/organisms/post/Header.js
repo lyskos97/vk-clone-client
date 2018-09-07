@@ -1,21 +1,25 @@
 import styled from 'react-emotion';
+import Link from 'next/link';
 
-import { AuthorLink, DateLink } from '../atoms';
+import { AuthorLink, DateLink, ArrowDownIcon } from 'ui/atoms';
 
 const Wrap = styled.div`
   display: flex;
   align-items: center;
+  padding: 15px 20px 0;
 `;
 
 const Avatar = styled.div`
-  flex: 1;
+  flex: 1.5;
 `;
 
 const Title = styled.div`
   flex: 10;
 `;
 
-const Controls = styled.div``;
+const Controls = styled.div`
+  flex: 0.5;
+`;
 
 const Author = styled.h5`
   line-height: 16px;
@@ -24,15 +28,19 @@ const Author = styled.h5`
   text-overflow: ellipsis;
 `;
 
-export const PostHeader = () => {
+export const Header = () => {
   return (
     <Wrap>
       <Avatar>
-        <img
-          style={{ width: 50, height: 50, borderRadius: '50%' }}
-          src="http://via.placeholder.com/100x100"
-          alt="avatar"
-        />
+        <Link href="/">
+          <a>
+            <img
+              style={{ width: 50, height: 50, borderRadius: '50%' }}
+              src="http://via.placeholder.com/100x100"
+              alt="avatar"
+            />
+          </a>
+        </Link>
       </Avatar>
       <Title>
         <Author>
@@ -40,6 +48,7 @@ export const PostHeader = () => {
         </Author>
         <DateLink>25 минут назад</DateLink>
       </Title>
+      <ArrowDownIcon />
     </Wrap>
   );
 };

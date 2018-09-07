@@ -1,12 +1,12 @@
 import styled from 'react-emotion';
 
-import { Header } from '../organisms';
-import { Menu } from '../molecules';
-import theme from '../theme';
-import vars from '../../../vars';
+import { Header } from 'ui/organisms';
+import { Menu } from 'ui/molecules';
+import theme from 'ui/theme';
+import { sizes } from 'ui/theme';
 
 const Gutter = styled.div`
-  height: ${vars.headerHeight};
+  height: ${sizes.headerHeight};
 `;
 
 const Wrapper = styled.div`

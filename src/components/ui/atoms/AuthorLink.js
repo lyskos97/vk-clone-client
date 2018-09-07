@@ -1,5 +1,4 @@
 import styled from 'react-emotion';
-import theme from '../theme';
 
 export const AuthorLink = styled.a`
   font-size: 13px;

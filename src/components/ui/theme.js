@@ -1,5 +1,14 @@
-export default {
-  color: {
+export const sizes = {
+  headerHeight: '42px'
+};
+
+export const font = {
+  regular:
+    '-apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif',
+};
+
+export const palette = {
+  colors: {
     white: '#fff',
     black: '#222',
     grey: '#929eb0',
@@ -24,9 +33,5 @@ export default {
     btnTertiaryaryHover: '#dfe6ed',
     btnTertiaryActive: '#dae2ea',
     btnTertiaryText: '#55677d',
-  },
-  font: {
-    regular:
-      '-apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif',
   },
 };

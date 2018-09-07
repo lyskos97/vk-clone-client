@@ -1,2 +1,2 @@
-export { Header } from './Header';
-export { Post } from './Post';
+export { Header} from './header';
+export { Post } from './post';

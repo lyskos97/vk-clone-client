@@ -1,12 +1,12 @@
 import styled from 'react-emotion';
 
-import vars from '../../../vars';
+import { sizes, palette } from 'ui/theme';
 
 export const Wrapper = styled.header`
   position: fixed;
-  height: ${vars.headerHeight};
+  height: ${sizes.headerHeight};
   width: 100%;
-  background-color: ${vars.colors.primary};
+  background-color: ${palette.colors.primary};
 `;
 
 export const Content = styled.div`
@@ -66,7 +66,7 @@ export const SearchInput = styled.input`
 
   &::placeholder {
     font-size: 13px;
-    color: ${vars.colors.primary};
+    color: ${palette.colors.primary};
   }
 
   &:focus {

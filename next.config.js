@@ -13,13 +13,14 @@ module.exports = withCSS({
             return cb();
           }
 
-          if (
-            res.match(/node_modules[/\\].*\.js/) &&
-            !res.match(/node_modules[/\\]webpack/) &&
-            !res.match(/node_modules[/\\]react-flexbox-grid/)
-          ) {
-            return cb(null, `commonjs ${req}`);
-          }
+          // if (
+          //   // res.match(/node_modules[/\\].*\.js/) &&
+          //   // !res.match(/node_modules[/\\]webpack/) &&
+          //   // !res.match(/node_modules[/\\]ui/)
+          //   // !res.match(/node_modules[/\\]react-flexbox-grid/)
+          // ) {
+          //   return cb(null, `commonjs ${req}`);
+          // }
 
           cb();
         });

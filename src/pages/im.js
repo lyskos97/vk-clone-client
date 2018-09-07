@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
-import { Layout } from '../components/ui/templates';
-import { Card } from '../components/ui/atoms';
+import { Layout } from 'ui/templates';
+import { Card } from 'ui/atoms';
 
 const Im = () => {
   return (

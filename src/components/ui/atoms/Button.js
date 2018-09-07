@@ -2,7 +2,7 @@ import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import { switchProp, ifProp } from 'styled-tools';
 
-import theme from '../theme';
+import { palette } from 'ui/theme';
 
 export const Button = styled.button`
   padding: 7px 16px 8px;
@@ -18,21 +18,21 @@ export const Button = styled.button`
   outline: none;
   color: ${ifProp(
     { variant: 'tertiary' },
-    theme.color.btnTertiaryText,
-    theme.color.white,
+    palette.colors.btnTertiaryText,
+    palette.colors.white,
   )};
 
   background-color: ${switchProp('variant', {
-    primary: theme.color.btnPrimary,
-    secondary: theme.color.btnSecondary,
-    tertiary: theme.color.btnTertiary,
+    primary: palette.colors.btnPrimary,
+    secondary: palette.colors.btnSecondary,
+    tertiary: palette.colors.btnTertiary,
   })};
 
   &:hover {
     background-color: ${switchProp('variant', {
-      primary: theme.color.btnPrimaryHover,
-      secondary: theme.color.btnSecondaryHover,
-      tertiary: theme.color.btnTertiaryaryHover,
+      primary: palette.colors.btnPrimaryHover,
+      secondary: palette.colors.btnSecondaryHover,
+      tertiary: palette.colors.btnTertiaryaryHover,
     })};
   }
 
@@ -40,9 +40,9 @@ export const Button = styled.button`
     padding: 8px 16px 7px;
 
     background-color: ${switchProp('variant', {
-      primary: theme.color.btnPrimaryActive,
-      secondary: theme.color.btnSecondaryActive,
-      tertiary: theme.color.btnTertiaryActive,
+      primary: palette.colors.btnPrimaryActive,
+      secondary: palette.colors.btnSecondaryActive,
+      tertiary: palette.colors.btnTertiaryActive,
     })};
   }
 `;
