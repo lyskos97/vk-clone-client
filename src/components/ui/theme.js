@@ -9,6 +9,14 @@ export const font = {
 
 export const palette = {
   colors: {
+    menu: {
+      link: '#285473',
+      linkBgHover: '#e1e5eb',
+    },
+    post: {
+      likeBtn: '#67707a',
+      viewCount: '#909399',
+    },
     white: '#fff',
     black: '#222',
     grey: '#929eb0',

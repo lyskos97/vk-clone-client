@@ -9,6 +9,7 @@ import {
   CommentOutline,
   ShareOutline,
   LikeOutline,
+  EyeOutline,
 } from 'ui/outlines';
 
 const createIconComponent = (Outline) => {
@@ -37,3 +38,4 @@ export const NotifyIcon = createIconComponent(NotifyOutline);
 export const ShareIcon = createIconComponent(ShareOutline);
 export const CommentIcon = createIconComponent(CommentOutline);
 export const LikeIcon = createIconComponent(LikeOutline);
+export const EyeIcon = createIconComponent(EyeOutline);

@@ -14,7 +14,7 @@ const Item = styled.span`
   padding: 8px;
 
   &:hover {
-    background-color: ${palette.colors.buttonActive};
+    background-color: ${palette.colors.menu.linkBgHover};
   }
 `;
 

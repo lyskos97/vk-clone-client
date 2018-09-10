@@ -4,8 +4,10 @@
   "plugins": ["jsx-a11y", "react", "import"],
   "rules": {
     "import/prefer-default-export": 0,
+    "import/no-unresolved": 0,
     "react/react-in-jsx-scope": 0,
     "react/jsx-filename-extension": 0,
+    "jsx-a11y/anchor-is-valid": 0,
     "arrow-body-style": 0,
     "indent": 0
   },

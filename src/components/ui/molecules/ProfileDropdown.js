@@ -1,4 +1,4 @@
-import { Component, forwardRef } from 'react';
+import { forwardRef } from 'react';
 import Link from 'next/link';
 
 import { DropdownItem, DropdownSeparator, DropdownList } from 'ui/atoms';
