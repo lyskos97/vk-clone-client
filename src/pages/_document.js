@@ -1,8 +1,8 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 import { extractCritical } from 'emotion-server';
+import { palette } from 'ui/theme';
 
 import sanitize from '../sanitize';
-import { palette } from 'ui/theme';
 
 const globalStyles = `
   ${sanitize}

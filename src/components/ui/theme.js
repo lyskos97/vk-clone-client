@@ -1,5 +1,5 @@
 export const sizes = {
-  headerHeight: '42px'
+  headerHeight: '42px',
 };
 
 export const font = {

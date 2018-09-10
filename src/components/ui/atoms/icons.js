@@ -11,11 +11,10 @@ import {
   LikeOutline,
 } from 'ui/outlines';
 
-const createIconComponent = Outline => {
+const createIconComponent = (Outline) => {
   const Icon = styled(Outline)`
-    ${p =>
-      p.fill &&
-      css`
+    ${p => p.fill
+      && css`
         & path {
           fill: ${p.fill};
         }
