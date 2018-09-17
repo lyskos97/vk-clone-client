@@ -2,7 +2,6 @@ import styled from 'react-emotion';
 
 import { Header } from 'ui/organisms';
 import { Menu } from 'ui/molecules';
-import theme from 'ui/theme';
 import { sizes } from 'ui/theme';
 
 const Gutter = styled.div`
@@ -10,7 +9,8 @@ const Gutter = styled.div`
 `;
 
 const Wrapper = styled.div`
-  margin: 0 150px;
+  margin: 0 auto;
+  width: 960px;
   padding: 0 15px;
 
   display: flex;

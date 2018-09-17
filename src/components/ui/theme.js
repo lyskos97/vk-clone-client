@@ -16,6 +16,9 @@ export const palette = {
     post: {
       likeBtn: '#67707a',
       viewCount: '#909399',
+      comments: {
+        showMoreBtnBg: '#f0f2f5',
+      },
     },
     white: '#fff',
     black: '#222',

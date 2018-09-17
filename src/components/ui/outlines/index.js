@@ -7,3 +7,4 @@ export { default as CommentOutline } from './comment.svg';
 export { default as ShareOutline } from './share.svg';
 export { default as LikeOutline } from './like.svg';
 export { default as EyeOutline } from './eye.svg';
+export { default as DeleteOutline } from './delete.svg';

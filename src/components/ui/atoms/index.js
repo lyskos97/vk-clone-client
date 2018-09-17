@@ -12,6 +12,7 @@ export {
   ShareIcon,
   LikeIcon,
   EyeIcon,
+  DeleteIcon,
 } from './icons';
 export { DropdownItem } from './DropdownItem';
 export { DropdownSeparator } from './DropdownSeparator';
