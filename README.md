@@ -1,1 +1,1 @@
-# vk clone client
+# vk-clone-client
